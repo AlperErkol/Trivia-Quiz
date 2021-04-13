@@ -1,0 +1,44 @@
+* {
+    box-sizing: border-box;
+    outline: none;
+}
+
+body{
+
+    font-family: 'Poppins', sans-serif;
+    background-image: linear-gradient(to right, #c31432 , #240b36);
+
+}
+
+html,body{
+    overflow-x: hidden;
+    width: 100%;
+}
+
+html,body,
+ul, ol {
+    padding: 0;
+    margin: 0;
+}
+
+li{
+    list-style: none;
+}
+
+ul, ol {
+    list-style-type: none;
+}
+
+a {
+    display: inline-block;
+    text-decoration: none;
+}
+
+button {
+    border:none;
+}
+
+h1,h2,h3,h4,h5,h6,
+p{
+    margin: 0;
+} 

@@ -1,0 +1,101 @@
+.question{
+    transition: all 1s;
+    transform:rotateY(90deg);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100%;
+    
+}
+
+.question .question-footer{
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    right: 0;
+}
+
+.question .question-content{
+    box-shadow: 0px 5px 25px rgba(0,0,0,0.2);
+}
+
+.question .question-content .question-content-inner{
+    padding: 2rem;
+}
+
+.question .question-content .question-content-inner .question-header h2{
+    border-left: 6px solid;
+    padding-left: 10px;
+    margin-bottom: 1rem;
+}
+.question .question-content .question-content-inner .question-body p{
+    margin-bottom: 1rem;
+}
+.question .question-content-inner .question-body .question-choice-multiple li ul{
+    margin-bottom: 1rem;
+}
+
+.question .question-content-inner .question-body .question-choice-boolean li ul{
+    margin-bottom: 1rem;
+}
+.question .question-content-inner .question-choice-multiple .multiple-item .answer_text_multiple{
+    opacity: 0.6;
+    transition: all 0.3s;
+}
+.question .question-content-inner .question-choice-multiple .multiple-item .answer_text_multiple:hover{
+    opacity: 1;
+}
+
+.question .question-content-inner .question-choice-multiple .multiple-item input[type="radio"]:checked ~ .answer_text_multiple{
+    opacity: 1;
+}
+
+.question .question-content-inner .question-choice-boolean .boolean-item .answer_text_boolean{
+    opacity: 0.6;
+    transition: all 0.3s;
+}
+.question .question-content-inner .question-choice-boolean .boolean-item .answer_text_boolean:hover{
+    opacity: 1;
+}
+.question .question-content-inner .question-choice-boolean .boolean-item input[type="radio"]:checked ~ .answer_text_boolean{
+    opacity: 1;
+}
+
+
+@media screen and (max-width:1024px){
+
+    .question .question-content-inner span,
+    .question .question-content-inner p{
+        font-size: 14px;
+    }
+
+
+    .question .question-content{
+    
+        
+        height: 100%;
+        width: 100%;
+        background-color: white;
+        border-radius: 16px;
+        position: relative;
+    }
+
+}
+
+@media screen and (min-width:1024px){
+
+    .question .question-content{
+    
+        
+        height: 100%;
+        width: 75%;
+        background-color: white;
+        border-radius: 16px;
+        position: relative;
+    
+    }
+
+    
+    
+
+}

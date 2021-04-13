@@ -1,0 +1,40 @@
+.container{
+    max-width: 1024px;
+    margin: 0 auto;
+    
+}
+
+@media screen and (max-width:1024px){
+    .container{
+        margin: 0 1rem;
+    }
+}
+
+
+.flex{
+    display: flex;
+}
+
+.row{
+    flex-direction: row;
+}
+
+.column{
+    flex-direction: column;
+}
+
+.justify-center{
+    justify-content: center;
+}
+
+.justify-between{
+    justify-content: space-between;
+}
+
+.align-center{
+    align-items: center;
+}
+
+.text-center{
+    text-align: center;
+}

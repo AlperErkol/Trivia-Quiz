@@ -1,0 +1,201 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Trivia Quiz App</title>
+    <link rel="stylesheet" href="assets/css/style.css">
+</head>
+<body>
+    
+
+    <!-- Header -->
+    <header class="header mb3 ">
+        <div class="container">
+            <nav class="navigation">
+                <div class="heading text-center">
+                    <a href="#"><h1 class="mb2">Trivia Quiz</h1></a>
+                    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Incidunt saepe libero ipsa tempora consequuntur magnam repellendus adipisci earum praesentium dolores? Commodi esse, suscipit doloremque rerum itaque atque aliquid quam aut.</p>
+                </div>
+            </nav>
+        </div>
+    </header>
+
+
+    <!-- Main Section  -->
+    <section class="main mb3">
+        <div class="container">
+            <!-- Options Div -->
+            <div class="general-options">
+                <div class="general-options-content">
+                    <form class="options_form" action="#">
+                        <div class="options_heading">
+                            <h2>General Settings</h2>
+                        </div>
+                        
+                        <div class="inputArea relative">
+                            <input class="question_number" type="number" required>
+                            <span>Number of Questions</span>
+                            <small class="error-text-input d-none">Number of questions must be between 1-50.</small>
+                        </div>
+                        
+                        <div class="inputArea relative mt2">
+                            <label for="select-box">Select Category</label>
+                            <select class="question_category" id="select-box">
+                                <option selected value="any">Any Category</option>
+                                <option value="9">General Knowledge</option>
+                                <option value="21">Sports</option>
+                                <option value="27">Animals</option>
+                                <option value="12">Music</option>
+                                <option value="11">Film</option>
+                                <option value="28">Vehicles</option>
+                                <option value="15">Video Games</option>
+                            </select>
+                        </div>
+                        <div class="inputArea relative">
+                            <label for="select-box">Select Question Difficulty</label>
+                            <select class="question_difficulty" id="select-box">
+                                <option selected value="any">Any Difficulty</option>
+                                <option value="easy">Easy</option>
+                                <option value="medium">Medium</option>
+                                <option value="hard">Hard</option>           
+                            </select>
+                        </div>
+                        <div class="inputArea relative">
+                            <label for="select-box">Select Question Type</label>
+                            <select class="question_type" id="select-box">
+                                <option selected value="any">Any Category</option>
+                                <option value="multiple">Multiple Choice</option>
+                                <option value="boolean">True / False</option> 
+                            </select>
+                        </div>
+                        <div class="buttonArea text-center">
+                            <button type="submit" class="get-started">Get Started</button>
+                            <div class="lds-ring d-none"><div></div><div></div><div></div><div></div></div>
+                        </div>
+                    </form>
+                </div>
+            </div>
+            <!-- Question Div -->
+            <div class="question d-none">
+                <form class="question-content">
+                    <div class="question-content-inner">
+                        <div class="question-header">
+                            <h2 id="questionNumber"></h2>
+                        </div>
+                        <div class="question-body">
+                            <div class="question-question">
+                                <p id="quiz_question">Lorem ipsum dolor, sit amet consectetur adipisicing elit. Inventore quam nostrum voluptatibus reiciendis non dignissimos!</p>
+                            </div>
+                            <div class="error_handling_questions">
+                                <p id="errorMessage"></p>
+                            </div>
+                            <div class="question-choice-multiple">
+                                <li class="multiple">
+                                    <ul class="multiple-item">
+                                        <label class="radio" for="choice_a">
+                                            <input class="answer_multiple" type="radio" id="choice_a" name="answer_multiple" value="choice_a" required>
+                                            <div class="radio__radio"></div>
+                                            <span id="choice_a_answers" class="answer_text_multiple"></span>
+                                        </label>
+                                        
+                                    </ul>
+                                    <ul class="multiple-item">
+                                        <label class="radio" for="choice_b">
+                                            <input class="answer_multiple" type="radio" id="choice_b" name="answer_multiple" value="choice_b" required>
+                                            <div class="radio__radio"></div>
+                                            <span id="choice_b_answers" class="answer_text_multiple"></span>
+                                        </label>
+                                    </ul>
+                                    <ul class="multiple-item">
+                                        <label class="radio" for="choice_c">
+                                            <input class="answer_multiple" type="radio" id="choice_c" name="answer_multiple" value="choice_c" required>
+                                            <div class="radio__radio"></div>
+                                            <span id="choice_c_answers" class="answer_text_multiple"></span>
+                                        </label>
+                                    </ul>
+                                    <ul class="multiple-item">
+                                        <label class="radio" for="choice_d">
+                                            <input class="answer_multiple" type="radio" id="choice_d" name="answer_multiple" value="choice_d" required>
+                                            <div class="radio__radio"></div>
+                                            <span id="choice_d_answers" class="answer_text_multiple"></span>
+                                        </label>
+                                    </ul>
+                                
+                                </li>
+                                
+                                
+                            </div>
+                            <div class="question-choice-boolean d-none">
+                                <li class="boolean">
+                                    <ul class="boolean-item">
+                                        <label class="radio" for="choice_true">
+                                            <input class="answer_boolean" type="radio" id="choice_true" name="answer_boolean" value="choice_true" required>
+                                            <div class="radio__radio"></div>
+                                            <span id="choice_true_answers" class="answer_text_boolean">True</span>
+                                        </label>
+                                    </ul>
+                                    <ul class="boolean-item">
+                                        <label class="radio" for="choice_false">
+                                            <input class="answer_boolean" type="radio" id="choice_false" name="answer_boolean" value="choice_false" required>
+                                            <div class="radio__radio"></div>
+                                            <span id="choice_false_answers" class="answer_text_boolean">False</span>
+                                        </label>
+                                    </ul>
+                                </li>           
+                            </div>
+                        </div>
+                    </div>
+                    <div class="question-footer ">
+                        <button type="submit" class="question-submit">Submit</button>
+                    </div>
+                    
+                </form>
+
+            </div>
+            <!-- Result Div -->
+            <div class="result d-none">
+                <div class="result-content">
+                    <div class="result-content-header">
+                        <h2 id="quizResult">Your quiz result : </h2>
+                        <hr class="mb2">
+                        <p class="mb1" id="numberOfQuestions"># of questions : 12</p>
+                        <p class="mb1" id="correctAnswers">Correct Answer(s) : 10 </p>
+                        <p class="mb2" id="incorrectAnswers">Incorrect Answer(s) : 2</p>
+                        
+                        <h2>Review : </h2>
+                        <hr>
+                    </div>
+                    
+                    <div class="result-content-all-questions">
+                        <div class="inner-container">
+                            <div class="question-card">
+    
+                            </div>
+                            
+                        </div>
+                    </div>
+                    <div class="result-footer text-center">
+                        <button class="quiz-again">Try Again!</button>
+                    </div>
+                    
+                </div>
+
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-content flex justify-center align-center">
+                <small class="text-center">© Copyright 2021 Open Trivia DB. All rights reserved.</small>
+            </div>
+        </div>
+    </footer>
+    
+
+    <script src="assets/js/app.js"></script>
+</body>
+</html>

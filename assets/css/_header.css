@@ -1,0 +1,38 @@
+.header .navigation .heading h1{
+    color: white;
+}
+
+.header .navigation .heading p{
+    color: white;
+    
+}
+
+@media screen and (min-width: 1024px) {
+
+    .header .navigation .heading h1{
+
+        font-weight: 800;
+        font-size: 60px;
+    }
+
+    .header .navigation .heading p{
+        font-size: 18px;
+    }
+    
+
+}
+
+@media screen and (max-width: 1024px) {
+
+    .header .navigation .heading h1{
+
+        font-weight: 800;
+        font-size: 45px;
+    }
+
+    .header .navigation .heading p{
+        font-size: 14px;
+    }
+
+}
+

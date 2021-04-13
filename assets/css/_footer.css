@@ -1,0 +1,12 @@
+.footer{
+    border-top: 1px solid white;
+    transition: all 1s;
+    
+}
+
+.footer .footer-content{
+
+    padding:1rem;
+    color: white;
+    
+}
